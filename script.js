@@ -9,14 +9,23 @@ $(document).ready(function() {
 
     // color Event Rows
     function colorMeJack() {
+        
         $("input").each(function() {
+            console.log(this)
+            console.log(hr)
             var rHour = $(this).attr("id");
             var rNum = parseInt(rHour);
+            console.log("thisisrHour" + rHour)
+            console.log("this is rnum "+ rNum)
             if (rNum === hr) {
+                console.log("if")
+            
                 $(this).addClass("present");
             } else if (rNum > hr) {
+                console.log("else if")
                 $(this).addClass("future");
             } else {
+                console.log("else")
                 $(this).addClass("past");
             };
         });
