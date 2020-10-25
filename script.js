@@ -31,11 +31,10 @@ $(document).ready(function() {
 
     // retrieving stored imputs for later use
     function retrieveSchedule() {
-        $("event").each(function() {
+        $(".event").each(function() {
             var eventId = $(this).attr("id");
             $(this).val(localStorage.getItem(eventId))
         });
-        console.log(retrieveSchedule);
     };
 
     setInterval(currentDate,1000);
